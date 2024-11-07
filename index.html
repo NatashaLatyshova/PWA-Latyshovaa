@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Мое PWA Приложение</title>
+</head>
+<body>
+    <header>
+        <button id="burger-menu" class="burger">☰</button>
+        <h1>Разработать PWA аналогичное данному</h1>
+        <button id="install-button" style="display: none;">Установить приложение</button>
+    </header>
+    <div class="container">
+        <main>
+            <div id="content">
+                <h2>Назначение</h2>
+                <div class="list-item">Отображать Emojis, предоставляемые GitHub REST API (https://api.github.com)</div>
+                <div class="list-item">Следить за жизненным циклом сервис воркера</div>
+                <h2>Функциональность</h2>
+                <div class="list-item">Реализовать установку приложения через собственный интерфейс, например, кнопку INSTALL (A2HS)</div>
+                <div class="list-item">Кнопка должна появляться вместо собственного предложения браузера (Chrome) об установке на рабочий стол. С этой целью следует перехватить событие beforeinstallprompt</div>
+                <div class="list-item">После установки, при запуске мобильного приложения с рабочего стола кнопка INSTALL должна исчезать</div>
+                <div class="list-item">Приложение должно реализовать кэширование всех своих активов посредсвом ServiceWorker</div>
+                <div class="list-item">В одной из вкладок (возможен также любой другой дизайн) приложение должно показывать Emojis, предоставляемые GitHub REST API (https://api.github.com/emojis)</div>
+                <div class="list-item">Реализовать "умную" загрузку изображений, например, используя технологию Progressive Image Loading and IntersectionObserver</div>
+                <div class="list-item">Приложение должно иметь оригинальную иконку и Splash Screen</div>
+                <div class="list-item">Желательно оформить вкладку Contacts</div>
+                <div class="list-item">Для повышения баллов следует предусмотреть "отзывчивый дизайн"</div>
+                <div class="list-item">Для повышения баллов возможен другой вариант общедоступного сервиса, предоставляющего картинки</div>
+                <div class="list-item">На одной из вкладок реализовать "распечатку" журнала сообщений от ServiceWorkera путём загрузки фиктивного файла, например log.html</div>
+                <div class="list-item">Log должен отслеживать install, activate, fetch, кэширование вновь загруженных emojis</div>
+                <h2>Установка</h2>
+                <div class="list-item">Реализовать загрузку приложения с локального хоста</div>
+                <div class="list-item">С этой целью организовать собственный CA, сертификат которого установить в качестве доверенного на мобильную платформу</div>
+                <div class="list-item">На web сервере локального хоста установить сертификат, подписанный собственным CA</div>
+                <div class="list-item">Установку на эмулятор организовать через 10.0.2.2</div>
+                <div class="list-item">Установку на девайс организовать через wi-fi роутер</div>
+            </div>
+        </main>
+    </div>
+    <!-- Бургер-меню -->
+    <div id="burger-menu-content" class="burger-menu-content">
+        <button id="show-home">Home</button>
+        <button id="show-log">Show Log From SW</button>
+        <button id="show-emojis">Emojis</button>
+        <button id="show-contacts">Contacts</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
